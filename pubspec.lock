@@ -5,10 +5,10 @@ packages:
     dependency: transitive
     description:
       name: async
-      sha256: d2872f9c19731c2e5f10444b14686eb7cc85c76274bd6c16e1816bff9a3bab63
+      sha256: "758e6d74e971c3e5aceb4110bfd6698efc7f501675bcfe0c775459a8140750eb"
       url: "https://pub.dev"
     source: hosted
-    version: "2.12.0"
+    version: "2.13.0"
   audio_service:
     dependency: "direct main"
     description:
@@ -34,7 +34,7 @@ packages:
     source: hosted
     version: "0.1.4"
   audio_session:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: audio_session
       sha256: "2b7fff16a552486d078bfc09a8cde19f426dc6d6329262b684182597bec5b1ac"
@@ -93,10 +93,10 @@ packages:
     dependency: transitive
     description:
       name: fake_async
-      sha256: "6a95e56b2449df2273fd8c45a662d6947ce1ebb7aafe80e550a3f68297f3cacc"
+      sha256: "5368f224a74523e8d2e7399ea1638b37aecfca824a3cc4dfdf77bf1fa905ac44"
       url: "https://pub.dev"
     source: hosted
-    version: "1.3.2"
+    version: "1.3.3"
   ffi:
     dependency: transitive
     description:
@@ -152,6 +152,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  foundation:
+    dependency: "direct main"
+    description:
+      name: foundation
+      sha256: "6f1fda07bd2a422145724b0f94ee68fabac95fabff982d5f334fe1a38cbed6a7"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.5"
   http:
     dependency: "direct main"
     description:
@@ -180,10 +188,10 @@ packages:
     dependency: "direct main"
     description:
       name: just_audio
-      sha256: f978d5b4ccea08f267dae0232ec5405c1b05d3f3cd63f82097ea46c015d5c09e
+      sha256: d449d6b01ace3343dd8ca7f910db871994942dc58752d2765db35694f9ffe7e2
       url: "https://pub.dev"
     source: hosted
-    version: "0.9.46"
+    version: "0.10.3"
   just_audio_background:
     dependency: "direct main"
     description:
@@ -212,10 +220,10 @@ packages:
     dependency: transitive
     description:
       name: leak_tracker
-      sha256: c35baad643ba394b40aac41080300150a4f08fd0fd6a10378f8f7c6bc161acec
+      sha256: "6bb818ecbdffe216e81182c2f0714a2e62b593f4a4f13098713ff1685dfb6ab0"
       url: "https://pub.dev"
     source: hosted
-    version: "10.0.8"
+    version: "10.0.9"
   leak_tracker_flutter_testing:
     dependency: transitive
     description:
@@ -264,14 +272,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.16.0"
-  nested:
-    dependency: transitive
-    description:
-      name: nested
-      sha256: "03bac4c528c64c95c722ec99280375a6f2fc708eec17c7b3f07253b626cd2a20"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.0"
   path:
     dependency: transitive
     description:
@@ -281,7 +281,7 @@ packages:
     source: hosted
     version: "1.9.1"
   path_provider:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: path_provider
       sha256: "50c5dd5b6e1aaf6fb3a78b33f6aa3afca52bf903a8a5298f53101fdaee55bbcd"
@@ -344,14 +344,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.8"
-  provider:
-    dependency: "direct main"
-    description:
-      name: provider
-      sha256: "4abbd070a04e9ddc287673bf5a030c7ca8b685ff70218720abab8b092f53dd84"
-      url: "https://pub.dev"
-    source: hosted
-    version: "6.1.5"
   rxdart:
     dependency: transitive
     description:
@@ -497,10 +489,10 @@ packages:
     dependency: transitive
     description:
       name: vm_service
-      sha256: "0968250880a6c5fe7edc067ed0a13d4bae1577fe2771dcf3010d52c4a9d3ca14"
+      sha256: ddfa8d30d89985b96407efce8acbdd124701f96741f2d981ca860662f1c0dc02
       url: "https://pub.dev"
     source: hosted
-    version: "14.3.1"
+    version: "15.0.0"
   web:
     dependency: transitive
     description:
@@ -518,5 +510,5 @@ packages:
     source: hosted
     version: "1.1.0"
 sdks:
-  dart: ">=3.7.0 <4.0.0"
+  dart: ">=3.7.2 <4.0.0"
   flutter: ">=3.27.0"
