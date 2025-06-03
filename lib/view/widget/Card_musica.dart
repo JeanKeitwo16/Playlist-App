@@ -1,16 +1,14 @@
-
-
 import 'package:flutter/material.dart';
-import 'package:player_musica/model/Musica_Model.dart';
+import '../../model/Musica_Model.dart';
 
 class CardMusica extends StatelessWidget {
-  final MusicaModel musicaC;
+  final MusicaModel musica;
   final VoidCallback onPressed;
   final bool isPlaying;
   final bool isSelected;
 
   const CardMusica({
-    required this.musicaC,
+    required this.musica,
     required this.onPressed,
     required this.isPlaying,
     required this.isSelected,
@@ -29,17 +27,14 @@ class CardMusica extends StatelessWidget {
             width: 56,
             height: 56,
             fit: BoxFit.cover,
-            errorBuilder:
-                (context, error, stackTrace) => Icon(Icons.music_note),
+            errorBuilder: (context, error, stackTrace) => const Icon(Icons.music_note),
           ),
         ),
-        title: Text(musicaC.title),
-        subtitle: Text(musicaC.author),
+        title: Text(musica.title),
+        subtitle: Text(musica.author),
         trailing: IconButton(
           icon: Icon(
-            isSelected
-                ? (isPlaying ? Icons.pause : Icons.play_arrow)
-                : Icons.play_arrow,
+            isSelected ? (isPlaying ? Icons.pause : Icons.play_arrow) : Icons.play_arrow,
           ),
           onPressed: onPressed,
         ),
