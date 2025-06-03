@@ -1,23 +1,67 @@
-# Flutter Music Downloader
+# Player de Música - Flutter (MVVM)
 
-**Descrição**  
-Este aplicativo Flutter para Android permite baixar e reproduzir uma playlist de músicas MP3 obtidas de um JSON remoto.  
-- **Streaming Progressivo**: A reprodução de cada música inicia antes do término do download completo.  
-- **Download em Background**: O download dos arquivos MP3 ocorre em segundo plano via WorkManager, com suporte a resume (HTTP Range).  
-- **Serviço em Foreground com Notificações de Mídia**: Durante a reprodução, é exibida uma notificação persistente contendo título, autor e controles (play, pause, stop).  
-- **Status de Download e Progresso**: A interface exibe uma lista de músicas com título, autor e estado do download (não iniciado, baixando, pausado, concluído, falha).  
-- **Resiliência**: Trata falhas de rede e permite retomar downloads interrompidos.
+Este aplicativo Flutter é um **player de música** moderno que carrega uma **playlist remota em JSON**, permite o **streaming progressivo** das faixas e oferece **execução em segundo plano com notificações do sistema**. 
+
+A arquitetura segue o padrão **MVVM**, separando claramente a interface do usuário, a lógica e os dados.
+
+## 🎵 Funcionalidades
+
+- Carregamento dinâmico da playlist via HTTP (JSON remoto)
+- Reprodução de áudio com `just_audio` e `just_audio_background`
+- Controles de mídia no painel de notificações
+- Streaming e execução em segundo plano
+- Interface intuitiva com indicação de música tocando
+- Arquitetura **MVVM** para escalabilidade e organização
+
+## 🧠 Estrutura do Projeto
+
+```
+lib/
+├── main.dart                         # Ponto de entrada do app
+├── model/
+│   └── musica_model.dart             # Modelo de dados da música
+├── service/
+│   └── musica_service.dart           # Serviço HTTP para buscar músicas
+├── view/
+│   ├── musica_lista_view.dart        # Página principal com a lista
+│   └── widget/
+│       └── card_musica.dart          # Widget customizado para exibir músicas
+├── viewmodel/
+│   └── musica_viewmodel.dart         # ViewModel com lógica de reprodução
+```
+
+## ▶️ Como Executar
+
+1. Clone este repositório:
+
+```bash
+git clone https://github.com/JeanKeitwo16/Playlist-App
+cd Playlist-App
+```
+
+2. Instale as dependências:
+
+```bash
+flutter pub get
+```
+
+3. Execute em um dispositivo físico ou emulador:
+
+```bash
+flutter run
+```
+
+> **Importante:** O app utiliza streaming, então é necessário conexão com a internet.
+
+## 🧑‍💻 Autor
+
+Jean Carlo, Luis Eduardo, Fabricio Machado
+[github.com/jeankeitwo16](https://github.com/jeankeitwo16)
+[github.com/FabricioMachad](https://github.com/FabricioMachad)
+[github.com/LuisKlt](https://github.com/LuisKlt)
 
 ---
 
-## Como Rodar
+## 📄 Licença
 
-1. **Pré‐requisitos**  
-   - Flutter SDK (>= 2.18) instalado  
-   - Android SDK configurado (mínimo API 21 ou superior)  
-   - Dispositivo Android (ou emulador) com Internet ativa  
-
-2. **Clonar ou Baixar o Repositório**  
-   ```bash
-   git clone https://github.com/JeanKeitwo16/Playlist-App
-   cd Playlist-App
+Este projeto é de código aberto para fins educacionais e pessoais. Licenciado sob a [MIT License](LICENSE).
