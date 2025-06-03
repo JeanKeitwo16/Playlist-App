@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:playlist_app/view/widget/Card_musica.dart';
+import 'package:provider/provider.dart';
 
 import '../viewmodel/Musica_ViewModel.dart';
 
@@ -8,7 +9,7 @@ class MusicaListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final viewModel = Profluttervider.of<MusicaViewModel>(context);
+    final viewModel = Provider.of<MusicaViewModel>(context);
 
     return Scaffold(
       appBar: AppBar(
